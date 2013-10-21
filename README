@@ -1,0 +1,16 @@
+Phase I
+Group Members: Longxiang Chen and Ildar Absalyamov
+
+source file: phase1.cpp, Makefile
+
+Instruction to run:	
+	    1. untar the tar ball
+	    2. compile
+	    >> make
+	    3. run the program
+	    >> ./phase1 [.mil input file]
+	    4. check the result, printed into stdout
+
+If you have problem to run the program, please contact us.
+Thank you!
+	    

@@ -1,0 +1,63 @@
+	.	_n
+	.	_i
+	.	_j
+	.[]	_a, 10
+	.	_s
+	.	t0
+	.	t1
+	.	t2
+	.	t3
+	.	t4
+	.	t5
+	.	p0
+
+BB1
+: START
+	.<	_n
+	=	_i, 0
+BB2
+: L3
+	>=	p0, _i, _n
+	?:=	L4, p0
+BB3
+	.[]<	_a, _i
+	=	_s, 0
+	=	_j, 0
+BB4
+: L0
+	>	p0, _j, _i
+	?:=	L1, p0
+BB5
+	=[]	t3, _a, _j
+	+	t4, _s, t3
+	=	_s, t4
+	+	t2, _j, 1
+	=	_j, t2
+	:=	L0
+BB6
+: L1
+	%	t5, _n, 2
+	!=	p0, t5, 0
+	?:=	L2, p0
+BB7
+	.>	_s
+BB8
+: L2
+	+	t0, _i, 1
+	=	_i, t0
+	:=	L3
+BB9
+: L4
+	.>	_n
+
+PATH 0: BB1 BB2 BB9
+PATH 1: BB1 BB2 BB3 BB4 BB6 BB7 BB8
+PATH 2: BB1 BB2 BB3 BB4 BB6 BB8
+PATH 3: BB1 BB2 BB3 BB4 BB5
+PATH 4: BB2 BB3 BB4 BB6 BB7 BB8
+PATH 5: BB2 BB3 BB4 BB6 BB8
+PATH 6: BB2 BB3 BB4 BB5
+PATH 7: BB4 BB5
+PATH 8: BB4 BB6 BB7 BB8
+PATH 9: BB4 BB6 BB8
+PATH 10: BB2 BB9

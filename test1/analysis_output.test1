@@ -1,0 +1,10 @@
+	.	_n
+	.	_m
+	.	p0
+
+BB1
+: START
+	.<	_n
+	.>	_n
+
+PATH0: BB1
